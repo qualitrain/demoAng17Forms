@@ -102,7 +102,7 @@
             <div class="col-6 col-sm my-2">
                 <input type="text" class="form-control" placeholder="Num Ext"
                     [(ngModel)] ="direccionForm.numeroExt" name="numeroExt" 
-                    pattern="^\d\d*\-[A-Za-z]$|^\d\d*$"
+                    pattern="^\d+\-[A-Za-z]$|^\d+$"
                     required #inpNumeroExt="ngModel">
                 <div [hidden]="inpNumeroExt.valid || inpNumeroExt.pristine" class="alert alert-danger">
                     El n&uacute;mero exterior es un campo obligatorio. Los valores aceptados son de la forma 34, 34-A, 5876-B
