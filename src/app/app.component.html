@@ -1,4 +1,18 @@
 <div class="container">
+  <h3 class="text-primary text-center mt-3">Ejemplos de Implementaci&oacute;n de Formularios</h3>
+  <div class="row justify-content-start mt-3">
+    @for(ejemI of ejemplos;track i;let i=$index){
+      <div class="col-12 col-sm-4 col-md border-start border-top border-white rounded p-2 {{ejemI.clasesCss}}"> 
+          <div class="form-check form-switch">
+            <input type="checkbox" class="form-check-input" id="customSwitchEjm{{i}}" 
+                   [checked]="ejemI.mostrar" (input)="activarDesactivarEjemplo(i)">
+            <label class="form-check-label" for="customSwitchEjm{{i}}">
+              <small>{{ejemI.descripcion}}</small>
+            </label>
+          </div>
+        </div>
+      }
+  </div>
   <div class="row mt-3">
     <h4 class="text-secondary mt-3"><i>Template Driven Forms</i></h4>
   </div>
