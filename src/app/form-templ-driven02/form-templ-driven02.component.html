@@ -13,7 +13,7 @@
 </div>
 @if(explicacionOn){
     <div class="bg-info bg-opacity-10 p-3 my-3 rounded">
-        <div class="text-center font-weight-bold">Ejemplo de formulario de tipo <i>Template Driven Forms</i> con validaciones propias de Angular</div>
+        <div class="text-center fw-bold">Ejemplo de formulario de tipo <i>Template Driven Forms</i> con validaciones propias de Angular</div>
         <div class="text-muted mt-2">
             Caracter&iacute;sticas:
             <ul>
@@ -24,12 +24,12 @@
             </ul>
             <strong>Aspectos t&eacute;cnicos relevantes</strong>:
             <ul>
-                <li>Cada campo validable en el <i>template</i> usa el <strong>atributo html 5 </strong> <code class="font-weight-bold">pattern</code>, que ser&aacute; 
+                <li>Cada campo validable en el <i>template</i> usa el <strong>atributo html 5 </strong> <code class="fw-bold">pattern</code>, que ser&aacute; 
                     la v&iacute;a para que un campo pueda ser reconocido por Angular como v&aacute;lido o inv&aacute;lido.</li>
                 <li>Se aprovechan las <strong>clases CSS</strong> que Angular crea en los campos de entrada. Estas clases reflejan el estado de cada campo.
-                    Las clases son <code class="font-weight-bold">ng-untouched</code>, <code class="font-weight-bold">ng-touched</code>, 
-                    <code class="font-weight-bold">ng-pristine</code>, <code class="font-weight-bold">ng-dirty</code>,
-                    <code class="font-weight-bold">ng-invalid</code> y <code class="font-weight-bold">ng-valid</code>.
+                    Las clases son <code class="fw-bold">ng-untouched</code>, <code class="fw-bold">ng-touched</code>, 
+                    <code class="fw-bold">ng-pristine</code>, <code class="fw-bold">ng-dirty</code>,
+                    <code class="fw-bold">ng-invalid</code> y <code class="fw-bold">ng-valid</code>.
                 </li>
                 <li>
                     Se usan <strong>estilos sobre</strong> algunas de las <strong>clases mencionadas</strong>, para marcar visualmente (con bordes izquierdos de color verde o rojo ) los campos como v&aacute;lidos 
@@ -44,7 +44,7 @@
                         &#125;<br>
                     </code>
                 </li>
-                <li>Se accede al objeto subyacente <code class="font-weight-bold">ngForm</code>.
+                <li>Se accede al objeto subyacente <code class="fw-bold">ngForm</code>.
                 </li>
                 <li>Se invoca al <strong>m&eacute;todo <i>resetForm()</i> de <i>ngForm</i></strong> tras el <i>submit</i> del formulario
                     y se vuelve a inicializar el objeto que sirve de <i>modelo</i>,
@@ -71,8 +71,8 @@
     
 <div class="p-3  border border-info rounded rounded-lg mt-3">
     <form (ngSubmit)="insertarDireccion(formDir);" #formDir="ngForm">
-        <div class="text-info font-weight-bold">Dirección:</div>
-        <div class="row ">
+        <div class="text-info fw-bold">Dirección:</div>
+        <div class="row">
             <div class="col-sm-12 col-md-8 col-lg-9  my-2">
                 <input type="text" class="form-control" placeholder="Calle" 
                     pattern="^[\wÁÉÍÓÚáéíóú][\wÁÉÍÓÚáéíóú\s'.]{2}[\wÁÉÍÓÚáéíóú\s]*"
@@ -94,7 +94,7 @@
                     </div>
                 }
                 @if(depuracionOn){
-                    <i class="font-smaller text-danger">
+                    <i class="fs-6 text-danger">
                         {{spyDir.className.replace('form-control','')}}
                     </i>
                 }
@@ -129,7 +129,7 @@
                     Evite iniciar con espacios.
                 </div>
                 @if(depuracionOn){
-                    <i class="font-smaller text-danger">
+                    <i class="fs-6 text-danger">
                         {{spyColonia.className.replace('form-control','')}}
                     </i>
                 }

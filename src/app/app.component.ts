@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { FormTemplDriven01Component } from './form-templ-driven01/form-templ-driven01.component';
 import { FormTemplDriven02Component } from './form-templ-driven02/form-templ-driven02.component';
+import { FormTemplDriven03Component } from './form-templ-driven03/form-templ-driven03.component';
 
 class Ejemplo{
   mostrar?:boolean;
@@ -17,7 +18,8 @@ class Ejemplo{
     CommonModule, 
     RouterOutlet,
     FormTemplDriven01Component,
-    FormTemplDriven02Component
+    FormTemplDriven02Component,
+    FormTemplDriven03Component
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

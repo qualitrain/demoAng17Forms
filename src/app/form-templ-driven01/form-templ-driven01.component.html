@@ -13,7 +13,7 @@
 </div>
 @if(explicacionOn){
     <div class="bg-secondary bg-opacity-25  p-3 my-3 rounded">
-        <div class="text-center font-weight-bold">Ejemplo de formulario de tipo <i>Template Driven Forms</i> con validaciones t&iacute;picas de negocio</div>
+        <div class="text-center fw-bold">Ejemplo de formulario de tipo <i>Template Driven Forms</i> con validaciones t&iacute;picas de negocio</div>
         <div class="text-muted mt-2">
             Caracter&iacute;sticas:
             <ul>
@@ -41,8 +41,8 @@
 
 <div class="p-3  border border-success rounded rounded-lg mt-3">
     <form #formDir="ngForm">
-        <div class="text-primary font-weight-bold">Direcci&oacute;n:</div>
-        <div class="row ">
+        <div class="text-primary fw-bold">Direcci&oacute;n:</div>
+        <div class="row">
             <div class="col-sm-12 col-md-8 col-lg-9  my-2">
                 <input type="text" class="form-control" placeholder="Calle" 
                     [(ngModel)] ="direccionForm.calle" name="calle"
@@ -54,7 +54,7 @@
                     La calle es un campo obligatorio
                 </div>
                 @if(depuracionOn){
-                    <i class="font-smaller text-danger">
+                    <i class="fs-6 text-danger">
                         {{spyDir.className.replace('form-control','')}}
                     </i>
                 }
@@ -88,7 +88,7 @@
                     La colonia es un campo obligatorio
                 </div>
                 @if(depuracionOn){
-                    <i class="font-smaller text-danger">
+                    <i class="fs-6 text-danger">
                         {{spyColonia.className.replace('form-control','')}}</i>
                 }
             </div>
@@ -147,7 +147,7 @@
 </div>
 @if(depuracionOn){
     <div class="table-dark p-1 mt-1 rounded">
-        <small class="text-warning font-weight-bold table-dark text-monospace">{{diagnostico}}</small>
+        <small class="text-warning fw-bold table-dark text-monospace">{{diagnostico}}</small>
     </div>
 }
 @if(direcciones.length){
