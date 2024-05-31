@@ -27,15 +27,15 @@ export class AppComponent {
   ejemplos:Ejemplo[] = [
     { mostrar:true,   descripcion:'Formulario con Validación manual (template driven)',      clasesCss:'bg-primary bg-opacity-25' },
     { mostrar:true,   descripcion:'Formulario con Validación incorporada (template driven)', clasesCss:'bg-primary bg-opacity-10' },
-    { mostrar:false,  descripcion:'FormControl',                                             clasesCss:'bg-info bg-opacity-25' },
-    { mostrar:false,  descripcion:'FormGroup',                                               clasesCss:'bg-primary bg-opacity-25' },
-    { mostrar:false,  descripcion:'Formulario reactivo, sin validaciones',                   clasesCss:'bg-secondar bg-opacity-25y' },
-    { mostrar:false,  descripcion:'FormBuilder',                                             clasesCss:'bg-danger bg-opacity-25' },
-    { mostrar:false,  descripcion:'Validaciones formulario reactivo',                        clasesCss:'bg-secondary text-white' },
-    { mostrar:false,  descripcion:'Validador personalizado en driven template',              clasesCss:'bg-info text-white' },
-    { mostrar:false,  descripcion:'Validación cross-field en reactive form',                 clasesCss:'bg-success text-white' },
-    { mostrar:false,  descripcion:'Validación cross-field en template driven',               clasesCss:'bg-warning ' },
-    { mostrar:false,  descripcion:'Validación asíncrona en reactive form',                   clasesCss:'bg-danger text-white' }
+    { mostrar:false,  descripcion:'Validador personalizado (template driven)',               clasesCss:'bg-primary bg-opacity-50' },
+    { mostrar:false,  descripcion:'Validación cross-field (template driven)',                clasesCss:'bg-primary text-white' },
+    { mostrar:false,  descripcion:'FormControl (reactive form)',                                             clasesCss:'bg-success bg-opacity-25' },
+    { mostrar:false,  descripcion:'FormGroup (reactive form)',                                               clasesCss:'bg-success bg-opacity-10' },
+    { mostrar:false,  descripcion:'Formulario sin validaciones (reactive form)',                   clasesCss:'bg-success bg-opacity-50' },
+    { mostrar:false,  descripcion:'FormBuilder (reactive form)',                                             clasesCss:'bg-success text-white' },
+    { mostrar:false,  descripcion:'Validaciones  (reactive form)',                        clasesCss:'bg-warning bg-opacity-25' },
+    { mostrar:false,  descripcion:'Validación cross-field (reactive form)',                 clasesCss:'bg-warning bg-opacity-10' },
+    { mostrar:false,  descripcion:'Validación asíncrona (reactive form)',                   clasesCss:'bg-warning bg-opacity-50' }
   ];
 
   activarDesactivarEjemplo(n:number):void{
