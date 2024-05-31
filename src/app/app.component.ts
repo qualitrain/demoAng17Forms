@@ -25,17 +25,17 @@ class Ejemplo{
 export class AppComponent {
   title = 'demoAng17Forms';
   ejemplos:Ejemplo[] = [
-    { mostrar:true,   descripcion:'Formulario con Validación manual (template driven)',      clasesCss:'bg-primary bg-opacity-25' },
-    { mostrar:true,   descripcion:'Formulario con Validación incorporada (template driven)', clasesCss:'bg-primary bg-opacity-10' },
-    { mostrar:false,  descripcion:'Validador personalizado (template driven)',               clasesCss:'bg-primary bg-opacity-50' },
-    { mostrar:false,  descripcion:'Validación cross-field (template driven)',                clasesCss:'bg-primary text-white' },
-    { mostrar:false,  descripcion:'FormControl (reactive form)',                                             clasesCss:'bg-success bg-opacity-25' },
-    { mostrar:false,  descripcion:'FormGroup (reactive form)',                                               clasesCss:'bg-success bg-opacity-10' },
-    { mostrar:false,  descripcion:'Formulario sin validaciones (reactive form)',                   clasesCss:'bg-success bg-opacity-50' },
-    { mostrar:false,  descripcion:'FormBuilder (reactive form)',                                             clasesCss:'bg-success text-white' },
-    { mostrar:false,  descripcion:'Validaciones  (reactive form)',                        clasesCss:'bg-warning bg-opacity-25' },
-    { mostrar:false,  descripcion:'Validación cross-field (reactive form)',                 clasesCss:'bg-warning bg-opacity-10' },
-    { mostrar:false,  descripcion:'Validación asíncrona (reactive form)',                   clasesCss:'bg-warning bg-opacity-50' }
+    { mostrar:false,   descripcion:'Formulario con Validación manual (template driven)',      clasesCss:'bg-primary bg-opacity-25' },
+    { mostrar:false,   descripcion:'Formulario con Validación incorporada (template driven)', clasesCss:'bg-primary bg-opacity-10' },
+    { mostrar:true,  descripcion:'Validador personalizado (template driven)',                 clasesCss:'bg-primary bg-opacity-50' },
+    { mostrar:false,  descripcion:'Validación cross-field (template driven)',                 clasesCss:'bg-primary text-white' },
+    { mostrar:false,  descripcion:'FormControl (reactive form)',                              clasesCss:'bg-success bg-opacity-25' },
+    { mostrar:false,  descripcion:'FormGroup (reactive form)',                                clasesCss:'bg-success bg-opacity-10' },
+    { mostrar:false,  descripcion:'Formulario sin validaciones (reactive form)',              clasesCss:'bg-success bg-opacity-50' },
+    { mostrar:false,  descripcion:'FormBuilder (reactive form)',                              clasesCss:'bg-success text-white' },
+    { mostrar:false,  descripcion:'Validaciones  (reactive form)',                            clasesCss:'bg-warning bg-opacity-25' },
+    { mostrar:false,  descripcion:'Validación cross-field (reactive form)',                   clasesCss:'bg-warning bg-opacity-10' },
+    { mostrar:false,  descripcion:'Validación asíncrona (reactive form)',                     clasesCss:'bg-warning bg-opacity-50' }
   ];
 
   activarDesactivarEjemplo(n:number):void{
