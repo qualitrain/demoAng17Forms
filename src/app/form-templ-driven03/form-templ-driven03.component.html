@@ -24,7 +24,7 @@
                     y consonantes, as&iacute; como la repetición de vocales para determinar
                     si un contenido puede o no, tener sentido.
                 </li>
-                <li>El validador devuelve un booleano <i>palabrasSinSentido</i> en caso de error.</li>
+                <li>El validador devuelve un booleano <i>contenidoIlogico</i> en caso de error.</li>
                 <li>El validador personalizado se usa en los campos <i>Calle</i> y <i>Colonia</i>. Puede 
                     probarlo tecleando repeticiones de la misma letra.</li>
                 <li>El formulario muestra un mensaje <i>El contenido carece de sentido</i> cuando
@@ -54,8 +54,8 @@
         <div class="row">
             <div class="col-sm-12 col-md-8 col-lg-9  my-2">
                 <input type="text" class="form-control" placeholder="Calle" 
-                    pattern="^[\wÁÉÍÓÚáéíóú][\wÁÉÍÓÚáéíóú\s'.]{2}[\wÁÉÍÓÚáéíóú\s]*"
                     [(ngModel)] ="direccionForm.calle" name="calle"
+                    pattern="^[\wÁÉÍÓÚáéíóú][\wÁÉÍÓÚáéíóú\s'.]{2}[\wÁÉÍÓÚáéíóú\s]*"
                     required 
                     contenidoLogico 
                     #spyDir #inpCalle="ngModel">
@@ -72,7 +72,7 @@
                                 Evite iniciar con espacios.
                             </span>
                         }
-                        @if(inpCalle.errors?.['palabrasSinSentido']===true){
+                        @if(inpCalle.errors?.['contenidoIlogico']===true){
                             <span class="fw-bold">
                                 El contenido carece de sentido.
                             </span>
@@ -85,7 +85,7 @@
                     <div class="fst-italic fs-6 text-primary ">
                         inpCalle.errors?.['required'] = ({{inpCalle.errors?.['required']}})
                         inpCalle.errors?.['pattern'] = ({{inpCalle.errors?.['pattern']}})
-                        inpCalle.errors?.['palabrasSinSentido'] = ({{inpCalle.errors?.['palabrasSinSentido']}})
+                        inpCalle.errors?.['contenidoLogico'] = ({{inpCalle.errors?.['contenidoLogico']}})
                     </div>
                 }
             </div>
@@ -113,6 +113,7 @@
                 <input type="text" class="form-control " placeholder="Colonia"
                 pattern="^[\wÁÉÍÓÚáéíóú][\wÁÉÍÓÚáéíóú\s']{2}[\wÁÉÍÓÚáéíóú\s]*"
                 [(ngModel)] ="direccionForm.colonia" name="colonia"
+                contenidoLogico
                 required #spyColonia appValidContLogic #inpColonia="ngModel">
                 @if(inpColonia.invalid && !inpColonia.pristine){
                     <div class="alert alert-danger">
@@ -127,7 +128,7 @@
                                 Evite iniciar con espacios.
                             </span>
                         }
-                        @if(inpColonia.errors!['palabrasSinSentido']){
+                        @if(inpColonia.errors!['contenidoLogico']){
                             <span class="fw-bold">
                                 El contenido carece de sentido.
                             </span>

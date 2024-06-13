@@ -15,17 +15,17 @@ export class ValidatorContenidoLogicoDirective implements Validator{
 
   validarPalSinSentido(control:AbstractControl):ValidationErrors|null{
 
-    let valor:string = control.value;
+    const valor:string = control.value;
     if(!valor)
       return null;
     if(valor.length < 2)
       return null;
 
-    let vocalRegEx:RegExp = /[AEIOUÁÉÍÓÚ]/gi;
-    let consonantesRegEx:RegExp = /[B-DF-HJ-NÑP-TV-Z]/gi;
-    let vocalesRepetidasRegEx:RegExp = /A{2,}|E{3,}|I{2,}|O{3,}|U{2,}/i;
-    let porcenMinVocales = 0.30;
-    let porcenMaxVocales = 0.60;
+    const vocalRegEx:RegExp = /[AEIOUÁÉÍÓÚ]/gi;
+    const consonantesRegEx:RegExp = /[B-DF-HJ-NÑP-TV-Z]/gi;
+    const vocalesRepetidasRegEx:RegExp = /A{2,}|E{3,}|I{2,}|O{3,}|U{2,}/i;
+    const porcenMinVocales = 0.30;
+    const porcenMaxVocales = 0.60;
 
     let arrCoincidencias = valor.match(vocalRegEx);
     let nVocales = arrCoincidencias === null ? 0 : arrCoincidencias.length;
@@ -36,13 +36,13 @@ export class ValidatorContenidoLogicoDirective implements Validator{
     let porcenVocales = nVocales / (nVocales + nConsonantes); 
     //console.log("nVocales:" + nVocales, ", nConsonantes:" + nConsonantes + ", % vocales:" + porcenVocales);
     if(porcenVocales < porcenMinVocales){ //Muy pocas vocales
-      return {palabrasSinSentido:true};
+      return {contenidoIlogico:true};
     }
     if(porcenVocales > porcenMaxVocales){ //Demasiadas vocales
-      return {palabrasSinSentido:true};
+      return {contenidoIlogico:true};
     }
     if(vocalesRepetidasRegEx.test(valor)){ //Contiene demasiadas vocales consecutivas repetidas
-      return {palabrasSinSentido:true};     
+      return {contenidoIlogico:true};     
     }
     return null;
   }

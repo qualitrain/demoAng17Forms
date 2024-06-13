@@ -39,9 +39,9 @@ export class FormTemplDriven04Component implements AfterViewInit{
 
   insertarTelefonos(formulario:NgForm){
     console.log(formulario.value);
-    let telefono1 = formulario.form.get('tel1')?.getRawValue() as string;
-    let telefono2 = formulario.form.get('tel2')?.getRawValue() as string;
-    this.telefonosRegistrados.push(telefono1 + ", " + telefono2);
+    // let telefono1 = formulario.form.get('tel1')?.getRawValue() as string;
+    // let telefono2 = formulario.form.get('tel2')?.getRawValue() as string;
+    this.telefonosRegistrados.push(this.telefonos.tel1 + ", " + this.telefonos.tel2);
     formulario.reset();
   }
 
