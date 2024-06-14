@@ -1,0 +1,7 @@
+.ng-valid[required]   {
+    border-left: 5px solid hsl(105, 90%, 31%); /* verde */
+}
+
+.ng-invalid:not(form)  { /* la forma tambien tiene este estilo, pero no queremos que se le aplique estilo */
+    border-left: 5px solid hsl(1, 44%, 46%); /* rojo */
+}
